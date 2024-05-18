@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="css/output.css">
+</head>
+<body>
+  <!-- Background -->
+  <div class="bg-[#36384D] h-[calc(100dvh)] font-roboto text-dark-navy flex flex-col sm:justify-center sm:items-center sm:h-auto sm:min-h-screen">
+    <!-- Content Wrapper -->
+    <div class="bg-white h-full sm:h-auto sm:m-10 sm:rounded-3xl">
+      <!-- Thank you message Container -->
+      <div class="hidden h-full flex-col sm:max-w-[500px]" id="thank-you">
+        <!-- Thank you message Grow Wrapper -->
+        <div class="grow flex flex-col gap-60 px-10 py-20 justify-center sm:gap-10 sm:p-14">
+           <!-- First Block --> 
+          <div class="space-y-5 sm:space-y-7">
+            <img src="assets/images/icon-success.svg" alt="icon success">
+            <p class="text-4xl font-bold break-words sm:text-6xl">Thanks for subscribing!</p>
+            <p class="break-words">A confirmation email has been sent to <span class="font-bold" id="confirm-email">ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription</p>
+          </div>
+          <!-- Button -->
+          <div>
+            <button id="dismiss-btn" class="w-full bg-dark-navy text-white font-bold py-3 rounded-lg hover:cursor-pointer hover:bg-gradient-to-r hover:from-[#FF6A3A] hover:to-[#FF527B]">Dismiss message</button>
+          </div>
+        </div>
+      </div>
+      <!-- Main Page -->
+      <div class="h-full flex flex-col sm:flex-row-reverse sm:p-5 sm:max-w-[930px]" id="main">
+        <!-- Image -->
+        <div>
+          <img class="hidden sm:block sm:size-full" src="assets/images/illustration-sign-up-desktop.svg" alt="desktop illustration">
+          <img class="size-full sm:hidden" src="assets/images/illustration-sign-up-mobile.svg" alt="mobile illustration">
+        </div>
+        <!-- Description -->
+        <div class="grow flex flex-col justify-center gap-10 px-7 py-16 sm:grow-0 sm:gap-8">
+          <p class="font-bold text-4xl sm:text-6xl">Stay updated!</p>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <!-- Bullet List -->
+          <div class="flex flex-col gap-3">
+            <!-- Item 1 -->
+            <div class="flex items-center gap-3">
+              <!-- Image -->
+              <img class="size-5" src="assets/images/icon-success.svg" alt="icon success">
+              <!-- Info -->
+              <p>Product discovery and building what matters</p>
+            </div>
+            <!-- Item 2 -->
+            <div class="flex items-center gap-3">
+              <!-- Image -->
+              <img class="size-5" src="assets/images/icon-success.svg" alt="icon success">
+              <!-- Info -->
+              <p>Measuring to ensure updates are a success</p>
+            </div>
+            <!-- Item 3 -->
+            <div class="flex items-center gap-3">
+              <!-- Image -->
+              <img class="size-5" src="assets/images/icon-success.svg" alt="icon success">
+              <!-- Info -->
+              <p>And much more!</p>
+            </div>
+          </div>
+          <!-- Form -->
+          <form id="form" class="flex flex-col gap-2" novalidate>
+            <div class="text-sm font-bold flex justify-between">
+              <label for="email">Email Address</label>
+              <p class="text-[#FF6155] invisible" id="error-msg">Valid email required</p>
+            </div>
+            <input class="p-3 border border-gray-300 rounded-lg hover:cursor-pointer focus:border-dark-navy focus:outline-none" type="email" id="email" placeholder="email@company.com">
+            <button class="bg-dark-navy text-white font-bold py-3 rounded-lg mt-2 hover:cursor-pointer hover:bg-gradient-to-r hover:from-[#FF6A3A] hover:to-[#FF527B]" type="submit" id="submit-btn">Subscribe to monthly newsletter</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
